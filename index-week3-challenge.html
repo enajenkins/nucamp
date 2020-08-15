@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"
     />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="styles/custom.css" />
+    <link rel="stylesheet" href="styles/custom-week3-challenge.css" />
 
     <title>NuCamp: A Better Way To Camp</title>
   </head>
@@ -34,84 +34,36 @@
             <h1>NuCamp</h1>
             <h2>a better way to camp</h2>
           </div>
-          <div class="col-md-4 col-xl-2"><a class="btn btn-lg btn-info mt-4" data-toggle="modal" data-target="#reserveModal" role="button">Reserve&nbsp;a&nbsp;Campsite</a></div>
+          <div class="col-md-4 col-xl-2"><a class="btn btn-lg btn-info mt-4" href="#reserveForm" role="button" data-toggle="tooltip" data-placement="auto" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a></div>
           </div><!-- row -->
         </div><!-- container -->
     </header>
 
-    <!-- Modal -->
-  <div class="modal" id="reserveModal" tabindex="-1" aria-labelledby="reserveModalLabel">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg-info">
-          <h3 class="modal-title text-white" id="reserveModalLabel">Reserve&nbsp;a&nbsp;Campsite</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form class="m-3" id="reserveForm">
-            <div class="form-group row">
-              <label for="nuCampers" class="col-form-label col-xs-12 col-sm">Number of Campers</label>
-              <div class="col">
-                <select class="form-control col-auto" name="nuCampers" id="nuCampers">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                </select>
-              </div>
+    <!-- <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="index.html"><span class="fa fa-home fa-lg"> </span> Home </a></li>
+                <li class="nav-item"><a class="nav-link" href="about-us.html"><span class="fa fa-info fa-lg"> </span> About Us </a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"> </span> Sites</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><span class="fa fa-address-card fa-lg"> </span> Contact </a></li>
+              </ul>
             </div>
-
-
-            <div class="form-group row">
-                <label for="date" class="col-form-label col-6">Date</label>
-                <div class="col">
-                <input class="form-control" type="date" id="date" name="date" placeholder="Date"/>
-              </div>
-            </div>
-
-
-            <div class="form-group row">
-              <label for="" class="col-form-label col-sm-6 col-xs-12">Campsite Type</label>
-
-              <div class="btn-group btn-group-toggle col d-flex-inline" data-toggle="buttons">
-                <button class="btn btn-success active" type="radio" name="siteType" id="siteTent" value="tent" checked> Tent </button>
-                <button class="btn btn-primary" type="radio" name="siteType" id="siteRV" value="RV"> RV </button>
-              </div>
-            </div>
-
-            <!-- <div class="form-group row">
-              <label for="" class="col-form-label col-sm-6 col-xs-12">Campsite Type</label>
-
-              <div class="btn-group btn-group-toggle col flex-row" data-toggle="buttons">
-                <label class="btn btn-success active">
-                  <input type="radio" name="siteType" id="siteTent" value="tent" checked> Tent
-                </label>
-                <label class="btn btn-primary">
-                  <input type="radio" name="siteType" id="siteRV" value="RV"> RV
-                </label>
-              </div>
-            </div> -->
-
-            <!-- <div class="modal-footer"> -->
-              <div class="d-inline-flex">
-                <button class="form-control btn btn-secondary mr-2" type="button" data-dismiss="modal" aria-label="Cancel">Cancel</button>
-                <button class="form-control btn btn-primary" type="submit" aria-label="Search">Search</button>
-              </div>
-            <!-- </div> -->
-          </form>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </nav> -->
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -124,11 +76,12 @@
           </ul>
         </div>  
       </div>
-      <span class="navbar-text ml-auto">
-        <a role="button" data-toggle="modal" data-target="#loginModal">
-            <i class="fa fa-sign-in"></i> Login
-        </a>
-      </span>
+      
+    <span class="navbar-text ml-auto">
+      <a role="button" data-toggle="modal" data-target="#loginModal">
+          <i class="fa fa-sign-in"></i> Login
+      </a>
+    </span>
     </nav>
 
     <div id="loginModal" class="modal fade" role="dialog">
@@ -168,9 +121,9 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="row row-content">
-        <div class="col-md-8 mx-auto">
+    <div class="container-fluid">
+      <div class="row row-content pt-0">
+        <div class="col-md-12 pl-0 pr-0 mx-auto">
           <div id="homeCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
@@ -179,6 +132,7 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
+                <div class="overlay"></div>
                   <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground" />
                   <div class="carousel-caption">
                     <h3>Breadcrumb Trail Campground</h3>
@@ -186,6 +140,7 @@
                   </div>
               </div>
               <div class="carousel-item">
+                <div class="overlay"></div>
                 <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground" />
                 <div class="carousel-caption">
                   <h3>Breadcrumb Trail Campground</h3>
@@ -193,6 +148,7 @@
                 </div>
               </div>
               <div class="carousel-item">
+                <div class="overlay"></div>
                   <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground" />
                   <div class="carousel-caption">
                     <h3>Breadcrumb Trail Campground</h3>
@@ -209,36 +165,34 @@
               <span class="sr-only">Next</span>
           </a>
         </div>
-        <div class="btn-group" id="carouselButton">
-          <button class="btn btn-danger btn-sm" id="carouselPause">
-              <i class="fa fa-pause"></i>
-          </button>
-          <button class="btn btn-danger btn-sm" id="carouselPlay">
-              <i class="fa fa-play"></i>
-          </button>
-      </div>        
+      </div>
     </div>
+    <div class="container">
       <div class="row row-content align-items-center">
-        <div class="col-sm-4 order-sm-last col-md-3">
+        <div class="col-sm">
           <h2 class="">Discover & Review</h2>
-        </div>
-        <div class="col">
           <div class="media">
             <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
             <div class="media-body align-self-center">
               <h3>Our Campsites</h3>
               <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+              
+              <p class="d-none d-lg-block">Bacon ipsum dolor amet shankle pork chop brisket tail, cupim cow sirloin pork loin. Short ribs beef jerky bacon alcatra fatback pork belly pancetta tri-tip. Pork chop ball tip tongue pork loin flank. Chislic turkey fatback, t-bone short loin salami ball tip chuck filet mignon jowl. Picanha pork chop ribeye pastrami shankle. Shoulder ham meatball frankfurter sausage pastrami burgdoggen ball tip short loin t-bone beef ribs short ribs. Kevin brisket ribeye meatloaf tail tongue doner pig fatback beef alcatra.
+              </p>
             </div>
           </div>
         </div>        
       </div>
 
-      <div class="row row-content align-items-center">
-        <div class="col-sm-4 col-md-3">
+
+
+
+      <div class="row row-content align-items-start">
+
+        <div class="col-sm home-item">
           <h2>Featured Campsites</h2>
-        </div>
-        <div class="col">
           <div class="media">
+            <img class="d-flex d-lg-inline-flex mr-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake" />
             <div class="media-body align-self-center">
               <h3>React Lake Campground</h3>
               <p class="d-none d-sm-block">
@@ -246,24 +200,76 @@
               the shores of the pristine React Lake is a favorite for fly fishers.
               </p>
             </div>
-            <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake" />
           </div>
         </div>
-      </div>
 
-      <div class="row row-content align-items-center">
-        <div class="col-sm-4 order-sm-last col-md-3">
-          <h2 class="">Our Community Partners</h2>
-        </div>
-        <div class="col">
+        <div class="col-sm home-item d-none d-lg-block">
+          <h2>Our Community Partners</h2>
           <div class="media">
-            <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+            <img class="d-flex d-lg-inline-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
             <div class="media-body align-self-center">
               <h3>Bootstrap Outfitters</h3>
-              <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+              <p class="d-none d-sm-block">
+                Bootstrap Outfitters supplies you with gear you need at prices you can't beat.
+              </p>
             </div>
           </div>
-        </div>        
+        </div>  
+              
+      </div>
+
+
+      <div class="row row-content align-items-start d-block .d-lg-none">
+        <div class="col-sm home-item">
+          <h2>Our Community Partners</h2>
+          <div class="media">
+            <img class="d-flex d-lg-inline-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+            <div class="media-body align-self-center">
+              <h3>Bootstrap Outfitters</h3>
+              <p class="d-none d-sm-block">
+                Bootstrap Outfitters supplies you with gear you need at prices you can't beat.
+              </p>
+            </div>
+          </div>
+        </div>  
+      </div>
+
+
+
+      <div class="row row-content align-items-center">
+        <div class="col-sm-10 col-lg-6 mx-auto">
+          <div class="card">
+              <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+              <div class="card-body">
+                <form id="reserveForm">
+                  <div class="form-group row">
+                    <label for="nuCampers" class="col-form-label col-xs-12 col-sm">Number of Campers</label>
+                    <div class="col">
+                      <select class="form-control col-auto" name="nuCampers" id="nuCampers">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="date" class="col-form-label col-sm-6 col-xs-12">Date</label>
+                      <div class="col col-xs-12">
+                      <input class="form-control" type="date" id="date" name="date" placeholder="Date"/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col">
+                      <button class="form-control btn btn-primary" type="submit">Search</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
 
@@ -301,17 +307,7 @@
 
     <script>
       $(function () {
-        $('#reserveModal').modal(options)
-      });
-
-      $(function() {
-          $(".carousel").carousel( { interval: 2000 } );
-          $("#carouselPause").click(function(){
-              $(".carousel").carousel("pause");
-          });
-          $("#carouselPlay").click(function(){
-              $(".carousel").carousel("cycle");
-          });
+          $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
     
