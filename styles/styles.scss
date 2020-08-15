@@ -71,9 +71,9 @@ header {
 }
 
 .modal-header {
-  h3 {
+   h3, .close {
     color: white;
-  }
+   } 
 
   #loginModal & {
     background-color: $color-mid !important;

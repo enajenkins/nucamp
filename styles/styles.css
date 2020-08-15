@@ -45,7 +45,7 @@ header h2 {
   bottom: 0;
   z-index: 100; }
 
-.modal-header h3 {
+.modal-header h3, .modal-header .close {
   color: white; }
 
 #loginModal .modal-header {
