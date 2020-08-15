@@ -34,8 +34,8 @@
     </header>
 
     <!-- Modal -->
-  <div class="modal" id="reserveModal" tabindex="-1" aria-labelledby="reserveModalLabel">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
+  <div class="modal fade" id="reserveModal" tabindex="-1" aria-labelledby="reserveModalLabel" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title" id="reserveModalLabel">Reserve&nbsp;a&nbsp;Campsite</h3>
@@ -44,17 +44,20 @@
           </button>
         </div>
         <div class="modal-body">
+          <div class="container-fluid">
           <form class="m-3" id="reserveForm">
             <div class="form-group row">
-              <label for="nuCampers" class="col-form-label col-xs-12 col-sm">Number of Campers</label>
+              <label for="nuCampers" class="col-form-label col-sm-6">Number of Campers</label>
+              <!-- Select Dropdown -->
               <div class="col">
-                <select class="form-control col-auto" name="nuCampers" id="nuCampers">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
+                <select class="form-control" name="nuCampers" id="nuCampers">
+                  <option selected>Select...</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
                 </select>
               </div>
             </div>
@@ -68,14 +71,18 @@
             </div>
 
 
-            <div class="form-group row">
-              <label for="" class="col-form-label col-sm-6 col-xs-12">Campsite Type</label>
-
-              <div class="btn-group btn-group-toggle col d-flex-inline" data-toggle="buttons">
-                <button class="btn btn-success active" type="radio" name="siteType" id="siteTent" value="tent" checked> Tent </button>
-                <button class="btn btn-primary" type="radio" name="siteType" id="siteRV" value="RV"> RV </button>
-              </div>
-            </div>
+                            <!-- Campsite Type -->
+                            <div class="form-group row">
+                              <label class="col-sm-6 col-form-label">Campsite Type</label>
+                              <div class="col btn-group btn-group-toggle" data-toggle="buttons">
+                                  <label class="btn btn-success active">
+                                      <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked />Tent
+                                  </label>
+                                  <label class="btn btn-primary">
+                                      <input type="radio" name="siteType" id="siteRV" value="RV" autocomplete="off" />RV
+                                  </label>
+                              </div>
+                          </div>
 
             <!-- <div class="form-group row">
               <label for="" class="col-form-label col-sm-6 col-xs-12">Campsite Type</label>
@@ -97,6 +104,7 @@
               </div>
             <!-- </div> -->
           </form>
+        </div>
         </div>
       </div>
     </div>
