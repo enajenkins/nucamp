@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="styles/custom.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <!-- endbuild -->
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
@@ -28,7 +28,7 @@
             <h1>NuCamp</h1>
             <h2>a better way to camp</h2>
           </div>
-          <div class="col-md-4 col-xl-2"><a class="btn btn-lg btn-info mt-4" data-toggle="modal" data-target="#reserveModal" role="button">Reserve&nbsp;a&nbsp;Campsite</a></div>
+          <div class="col-md-4 col-xl-2"><a class="btn btn-lg btn-info mt-4" id="reserveButton" role="button">Reserve&nbsp;a&nbsp;Campsite</a></div>
           </div><!-- row -->
         </div><!-- container -->
     </header>
@@ -37,8 +37,8 @@
   <div class="modal" id="reserveModal" tabindex="-1" aria-labelledby="reserveModalLabel">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
-        <div class="modal-header bg-info">
-          <h3 class="modal-title text-white" id="reserveModalLabel">Reserve&nbsp;a&nbsp;Campsite</h3>
+        <div class="modal-header">
+          <h3 class="modal-title" id="reserveModalLabel">Reserve&nbsp;a&nbsp;Campsite</h3>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -119,13 +119,13 @@
         </div>  
       </div>
       <span class="navbar-text ml-auto">
-        <a role="button" data-toggle="modal" data-target="#loginModal">
+        <a role="button" id="loginButton">
             <i class="fa fa-sign-in"></i> Login
         </a>
       </span>
     </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div id="loginModal" class="modal fade collapse" role="dialog">
       <div class="modal-dialog" role="document">
           <div class="modal-content">
               <div class="modal-header">

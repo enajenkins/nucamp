@@ -1,5 +1,15 @@
 $(function () {
-  $('#reserveModal').modal(options)
+  //$('#reserveModal').modal(options);
+
+  $("#reserveButton").click(function(){
+    $("#reserveModal").modal("toggle");
+  });
+
+  
+  $("#loginButton").click(function(){
+    $("#loginModal").modal("toggle");
+  });
+
 });
 
 $(function() {
